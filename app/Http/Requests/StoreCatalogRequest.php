@@ -24,7 +24,7 @@ class StoreCatalogRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'file' => ['mimes:csv']
         ];
     }
 }
