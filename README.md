@@ -9,4 +9,6 @@
 5. php artisan migrate
 6. php artisan serve
 
+Основная логика лежит в CatalogController. 
+
 
