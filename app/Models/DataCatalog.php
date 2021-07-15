@@ -9,6 +9,10 @@ class DataCatalog extends Model
 {
     use HasFactory;
 
+    protected $table = 'data_catalog';
+
+    public $timestamps = false;
+
     protected $fillable = [
         'code',
         'name'

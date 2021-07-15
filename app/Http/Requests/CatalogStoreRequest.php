@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCatalogRequest extends FormRequest
+class CatalogStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class StoreCatalogRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreCatalogRequest extends FormRequest
     public function rules()
     {
         return [
-            'file' => ['mimes:csv']
+            'file' => ['required', 'file', 'mimes:csv,txt'],
         ];
     }
 }
